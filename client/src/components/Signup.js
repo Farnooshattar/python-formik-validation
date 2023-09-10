@@ -16,7 +16,7 @@ export const SignupForm = () => {
         console.log(data);
       });
   }, [refreshPage]);
-
+  // Yup is a schema builder for runtime value parsing and validation
   const formSchema = yup.object().shape({
     email: yup.string().email("Invalid email").required("Must enter email"),
     name: yup.string().required("Must enter a name").max(15),
